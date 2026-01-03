@@ -390,3 +390,226 @@
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
   margin-top: 140px;
 }
+/* ===== ONBOARDING ONLY (STEP 1) ===== */
+
+.onboarding-hero {
+  top: 40px;
+}
+
+.auth-hero-helper {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.onboarding-steps {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.onboarding-steps .active-step {
+  color: #374151;
+  font-weight: 600;
+}
+
+.step-arrow {
+  margin: 0 4px;
+}
+
+/* White card for onboarding */
+.onboarding-card {
+  width: 420px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  text-align: center;
+  margin-top: 160px;
+}
+/* ===== STEP 1 FORM ===== */
+
+.form-section {
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.form-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+.checkbox-row {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  padding: 6px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+  font-size: 13px;
+}
+/* ===== DOMAIN PILL INTERACTIONS ===== */
+
+.pill {
+  padding: 6px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+  background: #ffffff;
+  transition: 
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+/* Hover glow */
+.pill:hover {
+  box-shadow: 0 0 0 3px rgba(111, 207, 151, 0.25);
+  border-color: #6fcf97;
+}
+
+/* Selected (clicked) state */
+.pill.active {
+  background: #e8f7ef;
+  border-color: #6fcf97;
+  box-shadow: 0 0 0 3px rgba(111, 207, 151, 0.35);
+  font-weight: 500;
+}
+/* ===== ONBOARDING FOOTER BUTTONS ===== */
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+
+/* Back button */
+.back-btn {
+  padding: 10px 22px;
+  border-radius: 14px;
+  border: 1px solid #d1fae5;
+  background: #ffffff;
+  color: #374151;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Skip button (center, subtle) */
+.skip-btn {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Save & Next button */
+.next-btn {
+  padding: 10px 26px;
+  border-radius: 14px;
+  border: none;
+  background: #d1fae5;
+  color: #065f46;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* ===== STEP INDICATOR (SAME AS STEP 1) ===== */
+
+.onboarding-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* circle base */
+.step-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid #9ca3af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* completed */
+.step.completed {
+  color: #374151;
+}
+
+.step-circle.completed {
+  background: #6b7280;
+  color: #ffffff;
+  border-color: #6b7280;
+}
+
+/* active */
+.step.active {
+  color: #111827;
+  font-weight: 600;
+}
+
+.step.active .step-circle {
+  border-color: #111827;
+}
+
+/* upcoming */
+.step.upcoming {
+  color: #cbd5e1;
+}
+
+.step.upcoming .step-circle {
+  border-color: #cbd5e1;
+}
+
+.step-arrow {
+  color: #9ca3af;
+}
+.radio-row {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.auth-input.full {
+  margin-top: 10px;
+}

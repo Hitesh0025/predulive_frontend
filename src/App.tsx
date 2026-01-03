@@ -8,6 +8,9 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import TalentOnboarding from "./pages/TalentOnboarding";
+import TalentOnboardingStep2 from "./pages/TalentOnboardingStep2";
+
+
 
 function App() {
   return (
@@ -24,6 +27,8 @@ function App() {
         <Route path="/settings" element={<Settings />} />
         <Route path="/home" element={<Home />} />
         <Route path="/TalentOnboarding" element={<TalentOnboarding />} />
+        <Route path="/talent-onboarding-2" element={<TalentOnboardingStep2 />} />
+
       </Routes>
     </BrowserRouter>
   );
