@@ -1,0 +1,392 @@
+/* ---------- PAGE BACKGROUND ---------- */
+.auth-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #dff5ec 0%,
+    #eafaf3 45%,
+    #ffffff 45%,
+    #ffffff 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: Inter, sans-serif;
+}
+
+/* ---------- HERO (GREEN AREA) ---------- */
+.auth-hero {
+  position: absolute;
+  top: 30px;              /* ⬆ Welcome moved UP */
+  width: 100%;
+  text-align: center;
+}
+
+.auth-hero-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.auth-hero-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 4px;
+}
+
+.auth-hero-desc {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  margin-top: 6px;
+}
+
+/* ---------- CARD ---------- */
+.auth-card {
+  width: 400px;           /* ⬅ BOX WIDTH REDUCED */
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  z-index: 1;
+}
+
+/* ---------- CARD TITLE ---------- */
+.sign-in-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 16px;
+}
+
+/* ---------- SOCIAL LOGIN ---------- */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.social-btn {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  transition: box-shadow 0.2s, transform 0.1s;
+}
+
+.social-btn:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.social-btn img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* ---------- OR ---------- */
+.or-text {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 18px 0;
+}
+
+/* ---------- INPUT ---------- */
+.auth-input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #6fcf97;
+  box-shadow: 0 0 0 3px rgba(111, 207, 151, 0.25);
+}
+
+/* ---------- REMEMBER / FORGOT ---------- */
+.remember-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.remember-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.forgot-link {
+  font-size: 13px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.reset-link {
+  color: #6fcf97;
+  cursor: pointer;
+}
+
+/* ---------- TOGGLE SWITCH ---------- */
+.react-switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.react-switch-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 42px;
+  height: 22px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.react-switch-label .react-switch-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transition: 0.2s;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.react-switch-checkbox:checked + .react-switch-label {
+  background: #6fcf97;
+}
+
+.react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+/* ---------- BUTTON ---------- */
+.auth-button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #6fcf97;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 24px;
+}
+
+.auth-button:hover:not(:disabled) {
+  background: #5abf86;
+}
+
+.auth-button:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* ---------- LINKS ---------- */
+.auth-text {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.auth-link {
+  color: #6fcf97;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* Stack forgot + remember neatly for small width */
+.remember-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Keep toggle + text in one line */
+.remember-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* Reduce gap between hero text and sign-in box */
+.auth-card {
+  margin-top: 160px;
+}
+/* ---------- FINAL REMEMBER / FORGOT LAYOUT (MATCH IMAGE) ---------- */
+.remember-row {
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: flex-start;  /* left aligned */
+  gap: 14px;
+}
+
+/* Forgot password stays on top */
+.forgot-link {
+  order: 1;
+}
+
+/* Remember me goes below */
+.remember-toggle-row {
+  order: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* Right-align forgot password only */
+.forgot-link {
+  align-self: flex-end;   /* pushes it to the right */
+  text-align: right;
+}
+/* ---------- TOP LEFT LOGO ---------- */
+.auth-logo {
+  position: absolute;
+  top: 10px;
+  left: 300px;
+}
+
+.auth-logo img {
+  height: 84px;      /* adjust if needed */
+  width: auto;
+}
+/* ---------- HERO LOGO (MATCH REFERENCE IMAGE) ---------- */
+/* FORCE hero logo size & position */
+.auth-hero .hero-logo {
+  height: 90px !important;
+  width: auto !important;
+  margin-bottom: 4px !important;
+}
+.auth-hero {
+  top: 30px !important;
+}
+.hero-logo {
+  height: 72px;        /* BIG */
+  width: auto;
+  margin-bottom: 6px; /* VERY close to Welcome */
+}
+/* ---------- TOP RIGHT LINKS ---------- */
+.auth-top-right {
+  position: absolute;
+  top: 22px;          /* aligns with logo vertically */
+  right: 250px;        /* opposite of logo */
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.top-link {
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+/* ---------- TOP RIGHT ACTION BUTTONS ---------- */
+.auth-top-right {
+  position: absolute;
+  top: 22px;
+  right: 200px;
+  display: flex;
+  gap: 14px;
+}
+
+.top-action {
+  padding: 8px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;        /* pill shape like social buttons */
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  background: #ffffff;
+  text-decoration: none;
+  transition: box-shadow 0.2s, transform 0.1s;
+}
+.top-action:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+/* === SIGNUP REMEMBER TOGGLE (FORCED FIX) === */
+.toggle-input {
+  display: none;
+}
+
+.remember-row {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.remember-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.toggle-switch {
+  width: 42px;
+  height: 22px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.toggle-switch::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.toggle-input:checked + .toggle-switch {
+  background: #6fcf97;
+}
+
+.toggle-input:checked + .toggle-switch::after {
+  transform: translateX(20px);
+}
+
+.toggle-text {
+  font-size: 13px;
+  color: #374151;
+}
+
+/* ---------- ONBOARDING CARD ---------- */
+.onboarding-card {
+  width: 420px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+  margin-top: 140px;
+}
