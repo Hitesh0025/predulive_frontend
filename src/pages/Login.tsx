@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Link, useNavigate } from 'react-router-dom';
+import { useState } from "react";
 import "../auth.css";
 import { loginUser } from "../api/auth";
 
@@ -8,18 +8,8 @@ function Login() {
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    const role = localStorage.getItem("role");
-
-    if (isLoggedIn && role === "talent") {
-      window.location.href = "/talent";
-    }
-    if (isLoggedIn && role === "organization") {
-      window.location.href = "/organization";
-    }
-  }, []);
 
   const handleLogin = async () => {
     setLoading(true);
@@ -29,7 +19,8 @@ function Login() {
     if (res.success) {
       localStorage.setItem("isLoggedIn", "true");
       localStorage.setItem("role", res.role);
-      window.location.href = "/TalentOnboarding";
+      navigate("/TalentOnboarding");
+;
     }
   };
 
@@ -41,14 +32,22 @@ function Login() {
       </div>
 
       {/* TOP RIGHT LINKS */}
-      <div className="auth-top-right">
-        <Link to="/organization-signup" className="top-action">
-          Sign up as Organization
-        </Link>
-        <Link to="/login" className="top-action">
-          Sign in
-        </Link>
-      </div>
+<div className="auth-top-right">
+  <button
+    className="top-action"
+    onClick={() => navigate("/organization-signup")}
+  >
+    Sign in as Organization
+  </button>
+
+  <button
+    className="top-action"
+    onClick={() => navigate("/login")}
+  >
+    Sign in
+  </button>
+</div>
+
 
       {/* GREEN BACKGROUND TEXT */}
       <div className="auth-hero">

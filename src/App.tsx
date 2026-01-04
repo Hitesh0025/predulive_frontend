@@ -9,6 +9,10 @@ import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import TalentOnboarding from "./pages/TalentOnboarding";
 import TalentOnboardingStep2 from "./pages/TalentOnboardingStep2";
+import TalentOnboardingStep3 from "./pages/TalentOnboardingStep3";
+import OrgSignup from "./pages/OrgSignup";
+import OrgOnboarding1 from "./pages/OrgOnboarding1";
+import OrgOnboarding2 from "./pages/OrgOnboarding2";
 
 
 
@@ -28,6 +32,16 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/TalentOnboarding" element={<TalentOnboarding />} />
         <Route path="/talent-onboarding-2" element={<TalentOnboardingStep2 />} />
+        <Route path="/talent-onboarding-3" element={<TalentOnboardingStep3 />}/>
+        <Route path="/login" element={<Login />} />
+        <Route path="/organization-signup" element={<OrgSignup />} />
+        <Route path="/organization-onboarding" element={<OrgOnboarding1 />}/>
+        <Route path="/organization-onboarding-2" element={<OrgOnboarding2 />} />
+
+
+
+
+        
 
       </Routes>
     </BrowserRouter>

@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "../auth.css";
 
 function Signup() {
   const [name, setName] = useState("");
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
@@ -16,14 +17,22 @@ function Signup() {
       </div>
 
       {/* TOP RIGHT ACTIONS */}
-      <div className="auth-top-right">
-        <Link to="/organization-signup" className="top-action">
-          Sign up as Organization
-        </Link>
-        <Link to="/login" className="top-action">
-          Sign in
-        </Link>
-      </div>
+<div className="auth-top-right">
+  <button
+    className="top-action"
+    onClick={() => navigate("/organization-signup")}
+  >
+    Sign in as Organization
+  </button>
+
+  <button
+    className="top-action"
+    onClick={() => navigate("/login")}
+  >
+    Sign in
+  </button>
+</div>
+
 
       {/* HERO TEXT */}
       <div className="auth-hero">
@@ -35,7 +44,11 @@ function Signup() {
       </div>
 
       {/* WHITE CARD */}
-      <div className="auth-card">
+      <div
+  className="auth-card org-signup-card"
+  style={{ marginTop: "150px", marginBottom: "60px" }}
+>
+
         <h3 className="sign-in-title">Register with</h3>
 
         {/* SOCIAL LOGIN */}

@@ -613,3 +613,276 @@
 .auth-input.full {
   margin-top: 10px;
 }
+.helper-text {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+  margin-left: 22px;
+  margin-top: 2px;
+}
+/* ===== ORG SIGNUP – MATCH PROVIDED PHOTO ===== */
+
+/* Center the white card content */
+.org-signup-card {
+  width: 40px;
+  margin-top: 70px;
+  text-align: center;
+}
+
+/* Social icons row – MUST be horizontal */
+.social-row {
+  display: flex;
+  flex-direction: row;        /* force horizontal */
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 18px 0;
+}
+
+/* Social button box */
+.social-btn {
+  width: 65px;
+  height: 65px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+/* Icon size – same as previous pages */
+.social-btn img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Inputs alignment like photo */
+.org-signup-card .form-group {
+  text-align: left;
+}
+.org-signup-card .form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+}
+.auth-input::placeholder {
+  font-weight: 200;
+}
+/* Reduce width ONLY for Org Signup page */
+.org-signup-card {
+  max-width: 400px;   /* adjust if needed */
+  width: 100%;
+}
+/* ===== ORG ONBOARDING – PHOTO 2 ===== */
+
+.org-onboarding-card {
+  margin: 120px auto 60px;
+  max-width: 420px;
+}
+
+/* Steps */
+/* ===== ONBOARDING HEADER (PHOTO 2) ===== */
+
+/* Scope header styles ONLY to onboarding */
+.onboarding-hero .auth-hero-title {
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.onboarding-hero .auth-hero-subtitle {
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.onboarding-hero .auth-hero-helper {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+/* Steps row */
+.onboarding-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.onboarding-steps .step.active {
+  color: #374151;
+  font-weight: 500;
+}
+
+.onboarding-steps .arrow {
+  opacity: 0.4;
+}
+
+/* Chips (same look as Photo 2) */
+.org-onboarding-card .chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.org-onboarding-card .chip {
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 11px;
+  color: #6b7280;
+  background: #ffffff;
+}
+
+/* Two column layout */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Bottom buttons */
+.onboarding-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.secondary-btn {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Space between green header and white card (Photo 2) */
+.org-onboarding-card {
+  margin-top: 150px;   /* Photo 2 spacing */
+}
+/* ===== ORG ONBOARDING CARD — MATCH PHOTO 2 EXACT ===== */
+
+/* Card padding (tighter) */
+.org-onboarding-card {
+  padding: 28px;
+}
+
+/* Labels – lighter like Photo 2 */
+.org-onboarding-card label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* Inputs – shorter height */
+.org-onboarding-card .auth-input {
+  height: 38px;
+  font-size: 13px;
+}
+
+/* Chips – smaller & subtle */
+.org-onboarding-card .chip {
+  padding: 4px 10px;
+  font-size: 11px;
+  border-radius: 12px;
+  color: #6b7280;
+}
+
+/* Reduce space between sections */
+.org-onboarding-card .form-group {
+  margin-bottom: 15px;
+}
+
+/* Bottom buttons – lighter like Photo 2 */
+.org-onboarding-card .auth-button {
+  height: 42px;
+  font-size: 14px;
+}
+
+.org-onboarding-card .secondary-btn {
+  height: 42px;
+  font-size: 14px;
+}
+/* ===== FIX ALIGNMENT TO MATCH PHOTO 2 ===== */
+
+/* Left-align labels */
+.org-onboarding-card label {
+  display: block;
+  text-align: left;
+}
+
+/* Left-align section headings (Organization type, domain, etc.) */
+.org-onboarding-card .form-group {
+  text-align: left;
+}
+
+/* Keep chips left-aligned */
+.org-onboarding-card .chip-group {
+  justify-content: flex-start;
+}
+
+/* Buttons position exactly like Photo 2 */
+.onboarding-actions {
+  display: flex;
+  justify-content: space-between;
+}
+/* Increase gap between label text and input (onboarding only) */
+.org-onboarding-card label {
+  margin-bottom: 6px;
+}
+/* Fix Save & Next shape – subtle like reference */
+.org-onboarding-card .onboarding-actions .auth-button {
+  width: auto !important;
+  height: 40px;
+  padding: 8px 24px;
+  border-radius: 12px;      /* 🔴 NOT pill */
+  background: #d1fae5 !important;
+  color: #065f46 !important;
+}
+
+/* Back button stays subtle too */
+.org-onboarding-card .onboarding-actions .secondary-btn {
+  height: 40px;
+  padding: 8px 20px;
+  border-radius: 12px;
+}
+/* Keep Back and Save & Next on the same level */
+.org-onboarding-card .onboarding-actions {
+  display: flex;
+  align-items: center;      /* 🔑 this fixes the level issue */
+}
+/* Hover glow */
+.org-onboarding-card .chip:hover {
+  border-color: #6fcf97;
+  box-shadow: 0 0 0 3px rgba(111, 207, 151, 0.25);
+  cursor: pointer;
+}
+
+/* Selected (clicked) chip */
+.org-onboarding-card .chip.active {
+  background: #e8f7ef;
+  border-color: #6fcf97;
+  color: #065f46;
+  box-shadow: 0 0 0 3px rgba(111, 207, 151, 0.35);
+}
+/* Increase space between last input and action buttons (onboarding only) */
+.org-onboarding-card .onboarding-actions {
+  margin-top: 50px;
+}
+/* Fix description textarea size (Org Onboarding page 2) */
+.org-onboarding-card textarea.auth-input {
+  resize: none;        /* prevent resizing */
+  height: 96px;        /* roughly double input height */
+  width: 100%;         /* same width as other inputs */
+}
+/* Align Back & Save & Next buttons to same height */
+.org-onboarding-card .onboarding-actions {
+  display: flex;
+  align-items: center;        /* 🔑 fixes vertical alignment */
+  justify-content: space-between;
+}

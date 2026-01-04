@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../auth.css";
 
 function TalentOnboardingStep2() {
+  const navigate = useNavigate();
+
   return (
     <div className="auth-wrapper">
 
@@ -11,14 +13,22 @@ function TalentOnboardingStep2() {
       </div>
 
       {/* TOP RIGHT BUTTONS */}
-      <div className="auth-top-right">
-        <Link to="/organization-signup" className="top-action">
-          Sign up as Organization
-        </Link>
-        <Link to="/login" className="top-action">
-          Sign in
-        </Link>
-      </div>
+<div className="auth-top-right">
+  <button
+    className="top-action"
+    onClick={() => navigate("/organization-signup")}
+  >
+    Sign in as Organization
+  </button>
+
+  <button
+    className="top-action"
+    onClick={() => navigate("/login")}
+  >
+    Sign in
+  </button>
+</div>
+
 
       {/* HERO */}
       <div className="auth-hero onboarding-hero">
@@ -136,8 +146,19 @@ function TalentOnboardingStep2() {
 
         {/* ACTIONS */}
         <div className="card-actions">
-          <button className="back-btn">Back</button>
-          <button className="next-btn">Save & Next</button>
+          <button
+  className="back-btn"
+  onClick={() => navigate(-1)}
+>
+  Back
+</button>
+
+          <button
+  className="next-btn"
+  onClick={() => navigate("/talent-onboarding-3")}
+>
+  Save & Next
+</button>
         </div>
 
       </div>

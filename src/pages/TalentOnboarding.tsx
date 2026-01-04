@@ -24,11 +24,23 @@ function TalentOnboarding() {
       <div className="auth-logo">
         <img src="/logo.svg" alt="Predulive" />
       </div>
+<div className="auth-top-right">
+  <button
+    className="top-action"
+    onClick={() => navigate("/organization-signup")}
+  >
+    Sign in as Organization
+  </button>
 
-      <div className="auth-top-right">
-        <span className="top-action">Sign up as Organization</span>
-        <span className="top-action">Sign in</span>
-      </div>
+  <button
+    className="top-action"
+    onClick={() => navigate("/login")}
+  >
+    Sign in
+  </button>
+</div>
+
+
 
       {/* HERO */}
       <div className="auth-hero onboarding-hero">
