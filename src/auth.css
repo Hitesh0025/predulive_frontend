@@ -1,0 +1,888 @@
+/* ---------- PAGE BACKGROUND ---------- */
+.auth-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #dff5ec 0%,
+    #eafaf3 45%,
+    #ffffff 45%,
+    #ffffff 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: Inter, sans-serif;
+}
+
+/* ---------- HERO (GREEN AREA) ---------- */
+.auth-hero {
+  position: absolute;
+  top: 30px;              /* ⬆ Welcome moved UP */
+  width: 100%;
+  text-align: center;
+}
+
+.auth-hero-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.auth-hero-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 4px;
+}
+
+.auth-hero-desc {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  margin-top: 6px;
+}
+
+/* ---------- CARD ---------- */
+.auth-card {
+  width: 400px;           /* ⬅ BOX WIDTH REDUCED */
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  z-index: 1;
+}
+
+/* ---------- CARD TITLE ---------- */
+.sign-in-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 16px;
+}
+
+/* ---------- SOCIAL LOGIN ---------- */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.social-btn {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  transition: box-shadow 0.2s, transform 0.1s;
+}
+
+.social-btn:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.social-btn img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* ---------- OR ---------- */
+.or-text {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 18px 0;
+}
+
+/* ---------- INPUT ---------- */
+.auth-input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #6fcf97;
+  box-shadow: 0 0 0 3px rgba(111, 207, 151, 0.25);
+}
+
+/* ---------- REMEMBER / FORGOT ---------- */
+.remember-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.remember-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.forgot-link {
+  font-size: 13px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.reset-link {
+  color: #6fcf97;
+  cursor: pointer;
+}
+
+/* ---------- TOGGLE SWITCH ---------- */
+.react-switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.react-switch-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 42px;
+  height: 22px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.react-switch-label .react-switch-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transition: 0.2s;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.react-switch-checkbox:checked + .react-switch-label {
+  background: #6fcf97;
+}
+
+.react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+/* ---------- BUTTON ---------- */
+.auth-button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #6fcf97;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 24px;
+}
+
+.auth-button:hover:not(:disabled) {
+  background: #5abf86;
+}
+
+.auth-button:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* ---------- LINKS ---------- */
+.auth-text {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.auth-link {
+  color: #6fcf97;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* Stack forgot + remember neatly for small width */
+.remember-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Keep toggle + text in one line */
+.remember-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* Reduce gap between hero text and sign-in box */
+.auth-card {
+  margin-top: 160px;
+}
+/* ---------- FINAL REMEMBER / FORGOT LAYOUT (MATCH IMAGE) ---------- */
+.remember-row {
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: flex-start;  /* left aligned */
+  gap: 14px;
+}
+
+/* Forgot password stays on top */
+.forgot-link {
+  order: 1;
+}
+
+/* Remember me goes below */
+.remember-toggle-row {
+  order: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* Right-align forgot password only */
+.forgot-link {
+  align-self: flex-end;   /* pushes it to the right */
+  text-align: right;
+}
+/* ---------- TOP LEFT LOGO ---------- */
+.auth-logo {
+  position: absolute;
+  top: 10px;
+  left: 300px;
+}
+
+.auth-logo img {
+  height: 84px;      /* adjust if needed */
+  width: auto;
+}
+/* ---------- HERO LOGO (MATCH REFERENCE IMAGE) ---------- */
+/* FORCE hero logo size & position */
+.auth-hero .hero-logo {
+  height: 90px !important;
+  width: auto !important;
+  margin-bottom: 4px !important;
+}
+.auth-hero {
+  top: 30px !important;
+}
+.hero-logo {
+  height: 72px;        /* BIG */
+  width: auto;
+  margin-bottom: 6px; /* VERY close to Welcome */
+}
+/* ---------- TOP RIGHT LINKS ---------- */
+.auth-top-right {
+  position: absolute;
+  top: 22px;          /* aligns with logo vertically */
+  right: 250px;        /* opposite of logo */
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.top-link {
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+/* ---------- TOP RIGHT ACTION BUTTONS ---------- */
+.auth-top-right {
+  position: absolute;
+  top: 22px;
+  right: 200px;
+  display: flex;
+  gap: 14px;
+}
+
+.top-action {
+  padding: 8px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;        /* pill shape like social buttons */
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  background: #ffffff;
+  text-decoration: none;
+  transition: box-shadow 0.2s, transform 0.1s;
+}
+.top-action:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+/* === SIGNUP REMEMBER TOGGLE (FORCED FIX) === */
+.toggle-input {
+  display: none;
+}
+
+.remember-row {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.remember-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.toggle-switch {
+  width: 42px;
+  height: 22px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.toggle-switch::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.toggle-input:checked + .toggle-switch {
+  background: #6fcf97;
+}
+
+.toggle-input:checked + .toggle-switch::after {
+  transform: translateX(20px);
+}
+
+.toggle-text {
+  font-size: 13px;
+  color: #374151;
+}
+
+/* ---------- ONBOARDING CARD ---------- */
+.onboarding-card {
+  width: 420px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+  margin-top: 140px;
+}
+/* ===== ONBOARDING ONLY (STEP 1) ===== */
+
+.onboarding-hero {
+  top: 40px;
+}
+
+.auth-hero-helper {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.onboarding-steps {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.onboarding-steps .active-step {
+  color: #374151;
+  font-weight: 600;
+}
+
+.step-arrow {
+  margin: 0 4px;
+}
+
+/* White card for onboarding */
+.onboarding-card {
+  width: 420px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  text-align: center;
+  margin-top: 160px;
+}
+/* ===== STEP 1 FORM ===== */
+
+.form-section {
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.form-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+.checkbox-row {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  padding: 6px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+  font-size: 13px;
+}
+/* ===== DOMAIN PILL INTERACTIONS ===== */
+
+.pill {
+  padding: 6px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+  background: #ffffff;
+  transition: 
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+/* Hover glow */
+.pill:hover {
+  box-shadow: 0 0 0 3px rgba(111, 207, 151, 0.25);
+  border-color: #6fcf97;
+}
+
+/* Selected (clicked) state */
+.pill.active {
+  background: #e8f7ef;
+  border-color: #6fcf97;
+  box-shadow: 0 0 0 3px rgba(111, 207, 151, 0.35);
+  font-weight: 500;
+}
+/* ===== ONBOARDING FOOTER BUTTONS ===== */
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+
+/* Back button */
+.back-btn {
+  padding: 10px 22px;
+  border-radius: 14px;
+  border: 1px solid #d1fae5;
+  background: #ffffff;
+  color: #374151;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Skip button (center, subtle) */
+.skip-btn {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Save & Next button */
+.next-btn {
+  padding: 10px 26px;
+  border-radius: 14px;
+  border: none;
+  background: #d1fae5;
+  color: #065f46;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* ===== STEP INDICATOR (SAME AS STEP 1) ===== */
+
+.onboarding-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* circle base */
+.step-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid #9ca3af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* completed */
+.step.completed {
+  color: #374151;
+}
+
+.step-circle.completed {
+  background: #6b7280;
+  color: #ffffff;
+  border-color: #6b7280;
+}
+
+/* active */
+.step.active {
+  color: #111827;
+  font-weight: 600;
+}
+
+.step.active .step-circle {
+  border-color: #111827;
+}
+
+/* upcoming */
+.step.upcoming {
+  color: #cbd5e1;
+}
+
+.step.upcoming .step-circle {
+  border-color: #cbd5e1;
+}
+
+.step-arrow {
+  color: #9ca3af;
+}
+.radio-row {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.auth-input.full {
+  margin-top: 10px;
+}
+.helper-text {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+  margin-left: 22px;
+  margin-top: 2px;
+}
+/* ===== ORG SIGNUP – MATCH PROVIDED PHOTO ===== */
+
+/* Center the white card content */
+.org-signup-card {
+  width: 40px;
+  margin-top: 70px;
+  text-align: center;
+}
+
+/* Social icons row – MUST be horizontal */
+.social-row {
+  display: flex;
+  flex-direction: row;        /* force horizontal */
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 18px 0;
+}
+
+/* Social button box */
+.social-btn {
+  width: 65px;
+  height: 65px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+/* Icon size – same as previous pages */
+.social-btn img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Inputs alignment like photo */
+.org-signup-card .form-group {
+  text-align: left;
+}
+.org-signup-card .form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+}
+.auth-input::placeholder {
+  font-weight: 200;
+}
+/* Reduce width ONLY for Org Signup page */
+.org-signup-card {
+  max-width: 400px;   /* adjust if needed */
+  width: 100%;
+}
+/* ===== ORG ONBOARDING – PHOTO 2 ===== */
+
+.org-onboarding-card {
+  margin: 120px auto 60px;
+  max-width: 420px;
+}
+
+/* Steps */
+/* ===== ONBOARDING HEADER (PHOTO 2) ===== */
+
+/* Scope header styles ONLY to onboarding */
+.onboarding-hero .auth-hero-title {
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.onboarding-hero .auth-hero-subtitle {
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.onboarding-hero .auth-hero-helper {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+/* Steps row */
+.onboarding-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.onboarding-steps .step.active {
+  color: #374151;
+  font-weight: 500;
+}
+
+.onboarding-steps .arrow {
+  opacity: 0.4;
+}
+
+/* Chips (same look as Photo 2) */
+.org-onboarding-card .chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.org-onboarding-card .chip {
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 11px;
+  color: #6b7280;
+  background: #ffffff;
+}
+
+/* Two column layout */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Bottom buttons */
+.onboarding-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.secondary-btn {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Space between green header and white card (Photo 2) */
+.org-onboarding-card {
+  margin-top: 150px;   /* Photo 2 spacing */
+}
+/* ===== ORG ONBOARDING CARD — MATCH PHOTO 2 EXACT ===== */
+
+/* Card padding (tighter) */
+.org-onboarding-card {
+  padding: 28px;
+}
+
+/* Labels – lighter like Photo 2 */
+.org-onboarding-card label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* Inputs – shorter height */
+.org-onboarding-card .auth-input {
+  height: 38px;
+  font-size: 13px;
+}
+
+/* Chips – smaller & subtle */
+.org-onboarding-card .chip {
+  padding: 4px 10px;
+  font-size: 11px;
+  border-radius: 12px;
+  color: #6b7280;
+}
+
+/* Reduce space between sections */
+.org-onboarding-card .form-group {
+  margin-bottom: 15px;
+}
+
+/* Bottom buttons – lighter like Photo 2 */
+.org-onboarding-card .auth-button {
+  height: 42px;
+  font-size: 14px;
+}
+
+.org-onboarding-card .secondary-btn {
+  height: 42px;
+  font-size: 14px;
+}
+/* ===== FIX ALIGNMENT TO MATCH PHOTO 2 ===== */
+
+/* Left-align labels */
+.org-onboarding-card label {
+  display: block;
+  text-align: left;
+}
+
+/* Left-align section headings (Organization type, domain, etc.) */
+.org-onboarding-card .form-group {
+  text-align: left;
+}
+
+/* Keep chips left-aligned */
+.org-onboarding-card .chip-group {
+  justify-content: flex-start;
+}
+
+/* Buttons position exactly like Photo 2 */
+.onboarding-actions {
+  display: flex;
+  justify-content: space-between;
+}
+/* Increase gap between label text and input (onboarding only) */
+.org-onboarding-card label {
+  margin-bottom: 6px;
+}
+/* Fix Save & Next shape – subtle like reference */
+.org-onboarding-card .onboarding-actions .auth-button {
+  width: auto !important;
+  height: 40px;
+  padding: 8px 24px;
+  border-radius: 12px;      /* 🔴 NOT pill */
+  background: #d1fae5 !important;
+  color: #065f46 !important;
+}
+
+/* Back button stays subtle too */
+.org-onboarding-card .onboarding-actions .secondary-btn {
+  height: 40px;
+  padding: 8px 20px;
+  border-radius: 12px;
+}
+/* Keep Back and Save & Next on the same level */
+.org-onboarding-card .onboarding-actions {
+  display: flex;
+  align-items: center;      /* 🔑 this fixes the level issue */
+}
+/* Hover glow */
+.org-onboarding-card .chip:hover {
+  border-color: #6fcf97;
+  box-shadow: 0 0 0 3px rgba(111, 207, 151, 0.25);
+  cursor: pointer;
+}
+
+/* Selected (clicked) chip */
+.org-onboarding-card .chip.active {
+  background: #e8f7ef;
+  border-color: #6fcf97;
+  color: #065f46;
+  box-shadow: 0 0 0 3px rgba(111, 207, 151, 0.35);
+}
+/* Increase space between last input and action buttons (onboarding only) */
+.org-onboarding-card .onboarding-actions {
+  margin-top: 50px;
+}
+/* Fix description textarea size (Org Onboarding page 2) */
+.org-onboarding-card textarea.auth-input {
+  resize: none;        /* prevent resizing */
+  height: 96px;        /* roughly double input height */
+  width: 100%;         /* same width as other inputs */
+}
+/* Align Back & Save & Next buttons to same height */
+.org-onboarding-card .onboarding-actions {
+  display: flex;
+  align-items: center;        /* 🔑 fixes vertical alignment */
+  justify-content: space-between;
+}
