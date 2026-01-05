@@ -25,7 +25,7 @@ function OrgOnboarding1() {
       </div>
 
       {/* HERO */}
-      <div className="auth-hero onboarding-hero">
+      <div className="auth-hero onboarding-hero onboarding-step-p1">
         <h2 className="auth-hero-title">Organization Onboarding</h2>
         <p className="auth-hero-subtitle">
           Let’s personalize your talent matches
@@ -34,12 +34,26 @@ function OrgOnboarding1() {
           You can edit this information anytime
         </p>
 
+        {/* STEPS — FIXED (CIRCLES ONLY) */}
         <div className="onboarding-steps">
-          <span className="step active">① Org Details</span>
+          <span className="step active">
+            <span className="step-circle active">1</span>
+            Org Details
+          </span>
+
           <span className="arrow">→</span>
-          <span className="step">② Preferences</span>
+
+          <span className="step upcoming">
+            <span className="step-circle upcoming">2</span>
+            Preferences
+          </span>
+
           <span className="arrow">→</span>
-          <span className="step">③ Expectations</span>
+
+          <span className="step upcoming">
+            <span className="step-circle upcoming">3</span>
+            Expectations
+          </span>
         </div>
       </div>
 
@@ -125,7 +139,8 @@ function OrgOnboarding1() {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            marginTop: "24px",
+            alignItems: "center",
+            marginTop: 24,
           }}
         >
           <button

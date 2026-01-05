@@ -886,3 +886,53 @@
   align-items: center;        /* 🔑 fixes vertical alignment */
   justify-content: space-between;
 }
+/* Completed steps (Org Details, Preferences) */
+.step-circle.done {
+  background-color: #7a8f86;   /* muted green-grey */
+  border-color: #7a8f86;
+  color: #ffffff;              /* white tick */
+}
+
+/* Active step number (3) */
+.step-circle {
+  background-color: transparent;
+  border-color: #7a8f86;
+  color: #7a8f86;
+}
+
+/* Step text color */
+.onboarding-steps .step {
+  color: #7a8f86;
+}
+/* Normalize spacing between all questions – Onboarding Page 2 */
+
+/* Every question block */
+.org-onboarding-card .form-group {
+  margin-bottom: 24px;   /* consistent gap between sections */
+}
+
+/* Label to inputs/radios/chips */
+.org-onboarding-card .form-group > label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Radio options spacing */
+.org-onboarding-card .radio-row {
+  margin-bottom: 8px;
+}
+
+/* Chip spacing */
+.org-onboarding-card .chip-group {
+  gap: 8px;
+}
+
+/* Input below chips (Other specify) */
+.org-onboarding-card .chip-group + .auth-input {
+  margin-top: 12px;
+}
+
+/* Space before buttons */
+.org-onboarding-card .onboarding-actions {
+  margin-top: 32px;
+}
