@@ -19,11 +19,32 @@ function TalentOnboarding() {
 
   return (
     <div className="auth-wrapper">
+<<<<<<< HEAD
+=======
 
+>>>>>>> 92cdc8477b495a8d2ab43e5cf37cd321682f0c71
       {/* TOP BAR */}
       <div className="auth-logo">
         <img src="/logo.svg" alt="Predulive" />
       </div>
+<<<<<<< HEAD
+
+      <div className="auth-top-right">
+        <button
+          className="top-action"
+          onClick={() => navigate("/organization-signup")}
+        >
+          Sign in as Organization
+        </button>
+
+        <button
+          className="top-action"
+          onClick={() => navigate("/login")}
+        >
+          Sign in
+        </button>
+      </div>
+=======
 <div className="auth-top-right">
   <button
     className="top-action"
@@ -41,6 +62,7 @@ function TalentOnboarding() {
 </div>
 
 
+>>>>>>> 92cdc8477b495a8d2ab43e5cf37cd321682f0c71
 
       {/* HERO */}
       <div className="auth-hero onboarding-hero">
@@ -54,6 +76,28 @@ function TalentOnboarding() {
           You can edit this information anytime
         </p>
 
+<<<<<<< HEAD
+        {/* STEP INDICATOR — FIXED (CIRCLES ONLY) */}
+        <div className="onboarding-steps">
+          <span className="step active">
+            <span className="step-circle active">1</span>
+            Goals & Interests
+          </span>
+
+          <span className="arrow">→</span>
+
+          <span className="step upcoming">
+            <span className="step-circle upcoming">2</span>
+            Background
+          </span>
+
+          <span className="arrow">→</span>
+
+          <span className="step upcoming">
+            <span className="step-circle upcoming">3</span>
+            Work Style
+          </span>
+=======
         {/* STEP INDICATOR */}
         <div className="onboarding-steps">
           <span className="active-step">① Goals & Interests</span>
@@ -61,12 +105,16 @@ function TalentOnboarding() {
           <span>② Background</span>
           <span className="step-arrow">→</span>
           <span>③ Work Style</span>
+>>>>>>> 92cdc8477b495a8d2ab43e5cf37cd321682f0c71
         </div>
       </div>
 
       {/* WHITE FORM CARD */}
       <div className="onboarding-card">
+<<<<<<< HEAD
+=======
 
+>>>>>>> 92cdc8477b495a8d2ab43e5cf37cd321682f0c71
         {/* SECTION 1 */}
         <div className="form-section">
           <p className="form-title">What’s your focus right now?*</p>
@@ -137,6 +185,22 @@ function TalentOnboarding() {
 
         {/* ACTION BUTTONS */}
         <div className="card-actions">
+<<<<<<< HEAD
+          <button
+            className="back-btn"
+            onClick={() => navigate("/login")}
+          >
+            Back
+          </button>
+
+          <button
+            className="next-btn"
+            onClick={() => navigate("/talent-onboarding-2")}
+          >
+            Save & Next
+          </button>
+        </div>
+=======
   <button
     className="back-btn"
     onClick={() => navigate("/login")}
@@ -153,6 +217,7 @@ function TalentOnboarding() {
 </div>
 
 
+>>>>>>> 92cdc8477b495a8d2ab43e5cf37cd321682f0c71
       </div>
     </div>
   );

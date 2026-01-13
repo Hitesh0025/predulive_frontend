@@ -13,6 +13,8 @@ import TalentOnboardingStep3 from "./pages/TalentOnboardingStep3";
 import OrgSignup from "./pages/OrgSignup";
 import OrgOnboarding1 from "./pages/OrgOnboarding1";
 import OrgOnboarding2 from "./pages/OrgOnboarding2";
+import OrgOnboarding3 from "./pages/OrgOnboarding3";
+import OrgSignIn from "./pages/OrgSignIn";
 
 
 
@@ -37,6 +39,10 @@ function App() {
         <Route path="/organization-signup" element={<OrgSignup />} />
         <Route path="/organization-onboarding" element={<OrgOnboarding1 />}/>
         <Route path="/organization-onboarding-2" element={<OrgOnboarding2 />} />
+        <Route path="/organization-onboarding-3" element={<OrgOnboarding3 />} />
+        <Route path="/organization-signin" element={<OrgSignIn />} />
+
+
 
 
 

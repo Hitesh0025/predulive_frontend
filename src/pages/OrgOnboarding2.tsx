@@ -13,8 +13,12 @@ function OrgOnboarding2() {
 
       {/* TOP RIGHT LINKS */}
       <div className="auth-top-right">
-        <Link to="/signup" className="top-action">Sign up as Talent</Link>
-        <Link to="/login" className="top-action">Sign in</Link>
+        <Link to="/signup" className="top-action">
+          Sign up as Talent
+        </Link>
+        <Link to="/login" className="top-action">
+          Sign in
+        </Link>
       </div>
 
       {/* HERO */}
@@ -28,18 +32,30 @@ function OrgOnboarding2() {
         </p>
 
         <div className="onboarding-steps">
-  <span className="step completed" data-step="1">Org Details</span>
+  <span className="step done">
+    <span className="step-circle done">✓</span>
+    Org Details
+  </span>
+
   <span className="arrow">→</span>
-  <span className="step active" data-step="2">Preferences</span>
+
+  <span className="step active">
+    <span className="step-circle active">2</span>
+    Preferences
+  </span>
+
   <span className="arrow">→</span>
-  <span className="step upcoming" data-step="3">Expectations</span>
+
+  <span className="step upcoming">
+    <span className="step-circle upcoming">3</span>
+    Expectations
+  </span>
 </div>
 
       </div>
 
       {/* WHITE CARD */}
       <div className="auth-card org-onboarding-card">
-
         {/* DESCRIPTION */}
         <div className="form-group">
           <label>How would you describe your organization?*</label>
@@ -95,7 +111,7 @@ function OrgOnboarding2() {
             <input className="auth-input" placeholder="Full name" />
             <input className="auth-input" placeholder="Email address" />
           </div>
-          <p className="auth-hero-helper" style={{ marginTop: "6px" }}>
+          <p className="auth-hero-helper" style={{ marginTop: 6 }}>
             This will be shown on the opportunity as the point of contact
           </p>
         </div>
@@ -106,18 +122,31 @@ function OrgOnboarding2() {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            marginTop: "24px",
+            alignItems: "center",
+            marginTop: 24,
           }}
         >
           <button
             className="secondary-btn"
-            onClick={() => navigate("/organization-onboarding-1")}
+            style={{
+              height: 40,
+              display: "flex",
+              alignItems: "center",
+              margin: 0,
+            }}
+            onClick={() => navigate("/organization-onboarding")}
           >
             Back
           </button>
 
           <button
             className="auth-button"
+            style={{
+              height: 40,
+              display: "flex",
+              alignItems: "center",
+              margin: 0,
+            }}
             onClick={() => navigate("/organization-onboarding-3")}
           >
             Save & Next
